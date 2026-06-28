@@ -3,36 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Figemax SA — Финансы в реальном времени для компаний и медицинских групп</title>
-<meta name="description" content="Бухгалтерия в реальном времени и роль внешнего финансового директора для средних и крупных компаний Романдии. Медицина — наша специальность. Данные в Швейцарии.">
+<title>Figemax SA — Бухгалтерия и финансы в реальном времени для компаний и медицинских групп</title>
+<meta name="description" content="Figemax берёт на себя бухгалтерию и финансовую функцию вашей компании: актуальные цифры каждый день, роль внешнего финдиректора — дешевле собственного отдела. Медицина — наша специальность.">
 <style>
 @import url('assets/fonts/fonts.css');
 :root{
   --plum:#641447; --plum-d:#551440; --plum-deep:#430f30; --magenta:#8a2d6b;
-  --charcoal:#2b2b2b; --ink:#333333; --body:#6a646e; --muted:#8a8490;
-  --tint:#f8f4f7; --line:#ececef;
+  --charcoal:#2b2b2b; --charcoal-2:#242424; --ink:#333333; --body:#6a646e; --muted:#8a8490;
+  --tint:#f8f4f7; --line:#ececef; --green:#009b9f;
 }
 *{-webkit-font-smoothing:antialiased;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Open Sans',system-ui,sans-serif;color:var(--body);background:#fff;line-height:1.7;}
 h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--ink);font-weight:500;line-height:1.25;}
-.os{font-family:'Open Sans',sans-serif;}
-.mont{font-family:'Montserrat',sans-serif;}
+.mont{font-family:'Montserrat',sans-serif;} .os{font-family:'Open Sans',sans-serif;}
 .text-plum{color:var(--plum);}
 .eyebrow{font-family:'Montserrat',sans-serif;letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-size:.72rem;color:var(--plum);}
 .h-sec{font-family:'Montserrat',sans-serif;font-weight:500;color:var(--ink);font-size:clamp(1.7rem,3.4vw,2.3rem);}
 .uline{width:62px;height:3px;background:var(--plum);border-radius:2px;}
 .lead{color:var(--body);font-size:1.02rem;}
-/* button — точно как у Figemax: прямоугольная, 4px, uppercase, Montserrat 500, spacing */
 .btn{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:500;font-size:.84rem;letter-spacing:1px;
   text-transform:uppercase;background:var(--plum);color:#fff;padding:14px 36px;border-radius:4px;
   transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 12px 26px -14px rgba(100,20,71,.6);cursor:pointer;border:none;}
 .btn:hover{background:#7a1a58;transform:translateY(-2px);}
-.btn-out{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);box-shadow:none;}
-.btn-out:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+.btn-out-plum{background:#fff;color:var(--plum);border:1.5px solid var(--plum);box-shadow:none;}
+.btn-out-plum:hover{background:#faf3f8;}
 .btn-light{background:#fff;color:var(--plum);box-shadow:0 12px 26px -14px rgba(0,0,0,.4);}
 .btn-light:hover{background:#f4eef2;}
-/* card услуг — центр, мягкая тень, без рамки */
 .card{background:#fff;border-radius:10px;padding:42px 30px;text-align:center;
   box-shadow:0 26px 55px -30px rgba(80,18,58,.30);transition:transform .28s,box-shadow .28s;}
 .card:hover{transform:translateY(-7px);box-shadow:0 34px 64px -28px rgba(80,18,58,.40);}
@@ -40,22 +37,21 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--ink);font-weight:500
 .ico svg{width:100%;height:100%;}
 .card h3{font-size:1.2rem;margin-bottom:12px;}
 .card p{font-size:.95rem;color:var(--body);}
-/* диагональные плам-баннеры (Divi-angle) */
-.band{position:relative;background:var(--plum-d);color:#fff;}
-.angle-t{clip-path:polygon(0 42px,100% 0,100% 100%,0 100%);}
-.angle-tb{clip-path:polygon(0 42px,100% 0,100% 100%,0 calc(100% - 42px));}
+.band{background:var(--plum-d);color:#fff;}
 .band h2,.band h3{color:#fff;}
+.nav-a{font-family:'Montserrat',sans-serif;font-weight:500;font-size:.92rem;color:var(--ink);transition:color .2s;}
+.nav-a:hover{color:var(--plum);}
 .link-u{position:relative;color:var(--plum);font-weight:600;}
 .link-u::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--magenta);transition:width .25s;}
 .link-u:hover::after{width:100%;}
-.nav-a{font-family:'Montserrat',sans-serif;font-weight:500;font-size:.92rem;color:var(--ink);transition:color .2s;}
-.nav-a:hover{color:var(--plum);}
 input,textarea{font-family:'Open Sans',sans-serif;width:100%;border:1px solid var(--line);border-radius:4px;padding:12px 14px;background:#fff;color:var(--ink);}
 input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;}
 .reveal.in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto;}.reveal{opacity:1;transform:none;}}
 .wrap{max-width:1180px;margin:0 auto;padding-left:22px;padding-right:22px;}
+.member img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block;filter:saturate(1.02);}
+@media(max-width:860px){.hide-mob{display:none!important;}}
 </style>
 </head>
 <body>
@@ -63,66 +59,69 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 <!-- ===== HEADER ===== -->
 <header id="top" style="position:fixed;inset:0 0 auto 0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 16px -12px rgba(100,20,71,.4);">
   <div class="wrap" style="height:70px;display:flex;align-items:center;justify-content:space-between;">
-    <a href="#top"><img src="assets/img/logo-figemax.png" alt="Figemax SA" style="height:30px;width:auto;"></a>
-    <nav style="display:flex;align-items:center;gap:30px;" class="hide-mob">
+    <a href="#top" aria-label="Наверх"><img src="assets/img/logo-figemax.png" alt="Figemax SA" style="height:30px;width:auto;"></a>
+    <nav style="display:flex;align-items:center;gap:28px;" class="hide-mob">
       <a href="#services" class="nav-a">Услуги</a>
       <a href="#medecins" class="nav-a">Медицина</a>
-      <a href="#economie" class="nav-a">Экономика</a>
-      <a href="#process" class="nav-a">Как это работает</a>
-      <a href="#confiance" class="nav-a">Доверие</a>
+      <a href="#economie" class="nav-a">Стоимость</a>
+      <a href="#equipe" class="nav-a">Команда</a>
+      <a href="#process" class="nav-a">Как мы работаем</a>
     </nav>
-    <a href="#contact" class="btn" style="padding:11px 26px;">Запросить предложение</a>
+    <a href="#contact" class="btn" style="padding:11px 24px;">Запросить предложение</a>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding-top:70px;overflow:hidden;">
-  <img src="assets/img/hero-med.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;">
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,18,.32),rgba(40,20,18,.12) 40%,rgba(255,255,255,.0) 70%);"></div>
-  <!-- белый угловой разделитель снизу -->
-  <div style="position:absolute;left:0;right:0;bottom:-1px;height:70px;background:#fff;clip-path:polygon(0 100%,100% 100%,100% 0,0 70%);"></div>
-  <div class="wrap" style="position:relative;width:100%;display:flex;justify-content:center;">
-    <div class="reveal in" style="background:#fff;border-radius:8px;max-width:720px;width:100%;padding:46px 48px;text-align:center;box-shadow:0 40px 90px -40px rgba(60,12,44,.55);margin:30px 0 60px;">
-      <p class="eyebrow" style="margin-bottom:16px;">Для компаний и медицинских групп Романдии</p>
-      <h1 class="os" style="font-weight:700;color:var(--plum);font-size:clamp(1.9rem,4.2vw,2.7rem);line-height:1.15;margin-bottom:18px;">
-        Финансы вашей компании<br>в реальном времени
+<!-- ===== HERO (карточка справа, ноутбук+медицина слева) ===== -->
+<section style="position:relative;min-height:100svh;display:flex;align-items:center;padding-top:70px;overflow:hidden;">
+  <img src="assets/img/hero-laptop.jpg" alt="Финансовый дашборд на ноутбуке в медицинском кабинете" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 55%;">
+  <div class="wrap" style="position:relative;width:100%;display:flex;justify-content:flex-end;">
+    <div class="reveal in" style="background:#fff;border-radius:8px;max-width:540px;width:100%;padding:44px 42px;box-shadow:0 40px 90px -36px rgba(60,12,44,.6);margin:40px 0;">
+      <p class="eyebrow" style="margin-bottom:16px;">Бухгалтерия и финансы в реальном времени</p>
+      <h1 class="os" style="font-weight:700;color:var(--plum);font-size:clamp(1.8rem,3.7vw,2.5rem);line-height:1.15;margin-bottom:18px;">
+        Финансы вашей компании —<br>каждый день перед глазами
       </h1>
-      <p class="lead" style="max-width:560px;margin:0 auto 30px;">
-        Передайте бухгалтерию и финансовую функцию Figemax: учёт любого объёма, картина бизнеса каждый день и роль внешнего финансового директора — без собственного штата и заметно дешевле.
+      <p class="lead" style="margin-bottom:28px;">
+        Figemax берёт на себя бухгалтерию и финансовую функцию. Вы видите актуальную картину бизнеса каждый день, принимаете решения на свежих цифрах — и платите меньше, чем за собственный отдел.
       </p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+      <div style="display:flex;flex-wrap:wrap;gap:14px;">
         <a href="#contact" class="btn">Запросить предложение</a>
-        <a href="#economie" class="btn" style="background:#fff;color:var(--plum);border:1.5px solid var(--plum);box-shadow:none;">Сколько вы экономите</a>
+        <a href="#economie" class="btn btn-out-plum">Узнать стоимость</a>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:22px;justify-content:center;margin-top:30px;color:var(--muted);font-size:.8rem;">
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;color:var(--muted);font-size:.8rem;">
         <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>Данные в Швейцарии</span>
-        <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>Рекомендованы FMH Services</span>
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>FMH Services</span>
         <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>Vaud · Neuchâtel</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== СДВИГ ===== -->
+<!-- ===== ЗНАКОМАЯ СИТУАЦИЯ (боль клиента → решение) ===== -->
 <section style="padding:84px 0 90px;background:#fff;">
   <div class="wrap">
-    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 52px;">
-      <p class="eyebrow" style="margin-bottom:14px;">Что изменилось</p>
-      <h2 class="h-sec">Раньше — собственный штат.<br>Теперь — реальное время.</h2>
+    <div class="reveal" style="text-align:center;max-width:700px;margin:0 auto 50px;">
+      <p class="eyebrow" style="margin-bottom:14px;">Знакомая ситуация?</p>
+      <h2 class="h-sec">Вы узнаёте о результатах с опозданием —<br>а бухгалтерия дорожает</h2>
       <div class="uline" style="margin:18px auto 0;"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;">
-      <div class="reveal" style="background:#fff;border-radius:10px;padding:40px 34px;box-shadow:0 26px 55px -30px rgba(80,18,58,.22);display:flex;flex-direction:column;">
-        <span class="eyebrow" style="color:var(--muted);">Прежняя модель</span>
-        <h3 class="mont" style="font-size:1.3rem;margin:12px 0 14px;">Бухгалтерия внутри компании</h3>
-        <p style="flex:1;">Средняя и крупная компания держала одного-трёх штатных бухгалтеров. Фидуциар работал «раз в квартал» — а финансовая картина нужна <b style="color:var(--ink);">сегодня</b>. Отдать учёт наружу было либо дорого, либо технически невозможно.</p>
-        <p style="margin-top:18px;font-size:.92rem;">Полная стоимость одного бухгалтера в кантоне Vaud — <b class="text-plum">CHF 104 000–108 000</b> в год. Команда из 2–4 человек — <b class="text-plum">CHF 210 000–430 000</b>.</p>
+      <div class="reveal" style="background:#fff;border-radius:10px;padding:38px 34px;box-shadow:0 26px 55px -30px rgba(80,18,58,.22);">
+        <h3 class="mont" style="font-size:1.25rem;margin-bottom:20px;">Сегодня</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+          <li style="display:flex;gap:12px;"><span style="color:var(--muted);font-weight:700;">—</span>Отчёты раз в квартал; решения — почти вслепую</li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--muted);font-weight:700;">—</span>Штатный бухгалтер обходится в <b style="color:var(--ink);white-space:nowrap;">CHF&nbsp;105&nbsp;000+</b> в год</li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--muted);font-weight:700;">—</span>Рутина отнимает время у вашего дела</li>
+          <li style="display:flex;gap:12px;"><span style="color:var(--muted);font-weight:700;">—</span>Ошибки в цифрах находятся слишком поздно</li>
+        </ul>
       </div>
-      <div class="reveal" style="border-radius:10px;padding:40px 34px;color:#fff;display:flex;flex-direction:column;background:linear-gradient(140deg,var(--plum) 0%,var(--plum-deep) 100%);box-shadow:0 30px 60px -30px rgba(80,18,58,.5);">
-        <span class="eyebrow" style="color:rgba(255,255,255,.7);">Модель Figemax</span>
-        <h3 class="mont" style="font-size:1.3rem;margin:12px 0 14px;color:#fff;">Производство в реальном времени</h3>
-        <p style="flex:1;color:rgba(255,255,255,.9);">Figemax производит учёт любого объёма <b style="color:#fff;">без собственного штата</b>: проводки, сверки, НДС, зарплата. Вы получаете баланс, P&amp;L и статус НДС на каждый день — и аналитику уровня финансового директора, а не отчёт раз в год.</p>
-        <p style="margin-top:18px;font-size:.92rem;color:rgba(255,255,255,.82);">Та же работа — по цене <b style="color:#fff;">заметно ниже</b> собственного отдела.</p>
+      <div class="reveal" style="border-radius:10px;padding:38px 34px;color:#fff;background:linear-gradient(140deg,var(--plum) 0%,var(--plum-deep) 100%);box-shadow:0 30px 60px -30px rgba(80,18,58,.5);">
+        <h3 class="mont" style="font-size:1.25rem;margin-bottom:20px;color:#fff;">С Figemax</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;color:rgba(255,255,255,.92);">
+          <li style="display:flex;gap:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg>Актуальные цифры каждый день</li>
+          <li style="display:flex;gap:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg>Команда экспертов вместо своего штата</li>
+          <li style="display:flex;gap:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg>Вы — о бизнесе, мы — о цифрах</li>
+          <li style="display:flex;gap:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg>Ошибки видны сразу — на сверке с источником</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -132,56 +131,56 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 <section id="services" style="padding:84px 0 90px;background:var(--tint);">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
-      <p class="eyebrow" style="margin-bottom:14px;">Услуги для вашей компании</p>
+      <p class="eyebrow" style="margin-bottom:14px;">Что мы для вас делаем</p>
       <h2 class="h-sec">Полная финансовая функция — на аутсорсе</h2>
       <div class="uline" style="margin:18px auto 0;"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px;">
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.5v5.5l3.5 2"/></svg></div>
-        <h3>Бухгалтерия в реальном времени</h3>
-        <p>Ваши книги стоят в реальном времени: баланс, P&amp;L, статус НДС, дебиторка и кредиторка актуальны на каждый день, а не на конец квартала.</p>
+        <h3>Учёт в реальном времени</h3>
+        <p>Ваши книги всегда актуальны: баланс, прибыль и убытки, статус НДС, дебиторка и кредиторка — на сегодня, а не на конец квартала.</p>
       </div>
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3.5-4 3 3 5.5-6.5"/></svg></div>
         <h3>Внешний финансовый директор</h3>
-        <p>Управленческая отчётность, бюджетирование, консолидация группы, квартальные разборы. Вы получаете решения, а не просто проводки.</p>
+        <p>Управленческая отчётность, бюджеты, консолидация группы и квартальные разборы. Вы получаете готовые выводы и решения, а не таблицы.</p>
       </div>
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div>
         <h3>Мультивалюта EUR / CHF</h3>
-        <p>Параллельные книги в EUR и CHF на каждый рапп — для экспортёров, часовой и микротех-индустрии Невшателя и трансграничных операций.</p>
+        <p>Параллельный учёт в EUR и CHF на каждый рапп — для экспортёров, часовой и микротех-индустрии Невшателя и трансграничных операций.</p>
       </div>
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="5" rx="1"/><rect x="14" y="15" width="7" height="5" rx="1"/></svg></div>
         <h3>Учёт по филиалам и центрам</h3>
-        <p>Каждое направление, филиал или практика — как отдельный центр прибыли. Видно, где вы зарабатываете, а где теряете.</p>
+        <p>Каждое направление, филиал или практика — как отдельный центр прибыли. Вы видите, где зарабатываете, а где теряете.</p>
       </div>
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 8-9 9-5.5-1-9-4-9-9V6l9-3 9 3z"/></svg></div>
-        <h3>Сверка с источником</h3>
-        <p>Каждая цифра сверена с банком, реестром НДС и зарплатной ведомостью — на рапп. Находим то, что Excel пропускает: задвоенную выручку, потерянный НДС.</p>
+        <h3>Точность без ошибок</h3>
+        <p>Каждая цифра сверена с банком, реестром НДС и зарплатой — на рапп. Мы находим то, что Excel пропускает: задвоенную выручку, потерянный НДС.</p>
       </div>
       <div class="card reveal">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18M8 21h8M12 17v4"/></svg></div>
-        <h3>Защищённый портал Figemax</h3>
-        <p>Вы передаёте документы как удобно — e-mail, фото, PDF выписок — и в любой момент видите свою финансовую картину онлайн, в защищённом портале.</p>
+        <h3>Личный кабинет Figemax</h3>
+        <p>Передавайте документы как удобно — e-mail, фото, PDF — и в любой момент смотрите свою финансовую картину онлайн, в защищённом кабинете.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== МЕДИЦИНА (плам-баннер) ===== -->
-<section id="medecins" class="band angle-tb" style="padding:118px 0;margin:-2px 0;">
+<!-- ===== МЕДИЦИНА (плам, прямые края) ===== -->
+<section id="medecins" class="band" style="padding:96px 0;">
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center;">
     <div class="reveal">
-      <div style="width:64px;height:64px;color:#fff;margin-bottom:22px;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" style="width:100%;height:100%;"><path d="M12 2v20M9 22h6M8 6c0 2.2 1.8 4 4 4s4-1.8 4-4M8 6h8M10 4.5c.6.6 1.2.9 2 .9s1.4-.3 2-.9"/><circle cx="12" cy="13" r="2.4"/></svg>
+      <div style="width:60px;height:60px;color:#fff;margin-bottom:22px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" style="width:100%;height:100%;"><path d="M12 2v20M9 22h6M8 6c0 2.2 1.8 4 4 4s4-1.8 4-4M8 6h8"/><circle cx="12" cy="13" r="2.4"/></svg>
       </div>
       <p style="font-family:'Montserrat';letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.72rem;color:#e7a9cf;margin-bottom:14px;">Les médecins, notre spécialité</p>
       <h2 style="font-size:clamp(1.8rem,3.6vw,2.4rem);margin-bottom:22px;">Медицина — наша специальность</h2>
-      <p style="color:rgba(255,255,255,.9);margin-bottom:18px;">Figemax — независимый юридически и экономически консультант, <b style="color:#fff;">рекомендованный кооперативом FMH Services</b> Швейцарской медицинской ассоциации. Мы понимаем уникальные административные и финансовые задачи медицинской практики.</p>
-      <p style="color:rgba(255,255,255,.9);">Растущие <b style="color:#fff;">групповые практики, медцентры и сети клиник</b> — это и есть компании, которым реальное время и роль внешнего финдиректора нужны больше всего, а собственный бухгалтерский штат обходится дорого. Во Vaud медицина и Life Sciences — приоритетный сектор кантона.</p>
+      <p style="color:rgba(255,255,255,.9);margin-bottom:18px;">Figemax рекомендован кооперативом <b style="color:#fff;">FMH Services</b> Швейцарской медицинской ассоциации. Закрытия медицинских практик у нас ведёт отдельный профильный специалист — мы знаем правила и налоги отрасли изнутри.</p>
+      <p style="color:rgba(255,255,255,.9);">Групповые практики, медцентры и сети клиник получают учёт по каждому кабинету, контроль зарплат и расходов и финансовую картину в реальном времени — а вы занимаетесь пациентами, а не бумагами.</p>
     </div>
     <div class="reveal">
       <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:36px 34px;">
@@ -189,8 +188,8 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
           <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Учёт каждого кабинета и практики как отдельного центра прибыли</span></li>
           <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Зарплата персонала, кредиторы и дебиторы — под контролем, на рапп</span></li>
-          <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Соответствие налоговым и юридическим обязательствам отрасли</span></li>
-          <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Вы занимаетесь пациентами — финансами занимаемся мы</span></li>
+          <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Соответствие налоговым и юридическим требованиям отрасли</span></li>
+          <li style="display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.92);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e7a9cf" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px;"><path d="M5 12l4 4 10-10"/></svg><span>Прозрачная финансовая картина по всей группе — в реальном времени</span></li>
         </ul>
         <a href="#contact" class="btn btn-light" style="margin-top:28px;">Обсудить вашу практику</a>
       </div>
@@ -198,83 +197,92 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
   </div>
 </section>
 
-<!-- ===== ЭКОНОМИКА ===== -->
+<!-- ===== СТОИМОСТЬ ===== -->
 <section id="economie" style="padding:84px 0 90px;background:#fff;">
   <div class="wrap">
-    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 30px;">
-      <p class="eyebrow" style="margin-bottom:14px;">Экономика</p>
-      <h2 class="h-sec">С чем вы на самом деле сравниваете</h2>
+    <div class="reveal" style="text-align:center;max-width:700px;margin:0 auto 30px;">
+      <p class="eyebrow" style="margin-bottom:14px;">Стоимость</p>
+      <h2 class="h-sec">Сколько вам стоит собственная бухгалтерия?</h2>
       <div class="uline" style="margin:18px auto 0;"></div>
-      <p class="lead" style="margin-top:20px;">Для средней и крупной компании реальная альтернатива — не «мандат за 10k», а <b style="color:var(--ink);">собственный бухгалтерский штат</b>. Именно с этим мы сравниваем. Все цифры по штату — из проверенных данных (соцвзносы BSV + зарплаты по Vaud).</p>
+      <p class="lead" style="margin-top:20px;">Штатная бухгалтерия — это не только зарплата. С учётом соцвзносов и рабочего места один бухгалтер в кантоне Vaud обходится в <b style="color:var(--ink);">CHF 105 000+</b> в год, а команда — в сотни тысяч. С Figemax вы получаете больше — и платите заметно меньше.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin:44px 0 56px;">
       <div class="reveal" style="background:var(--tint);border-radius:10px;padding:30px;text-align:center;">
         <div class="mont" style="font-weight:600;font-size:1.9rem;color:var(--plum);">≈ 105k</div>
-        <div style="margin-top:8px;font-size:.9rem;">CHF/год — полная стоимость <b style="color:var(--ink);">одного</b> штатного бухгалтера в Vaud</div>
+        <div style="margin-top:8px;font-size:.9rem;">CHF/год — <b style="color:var(--ink);">один</b> штатный бухгалтер (Vaud, полная стоимость)</div>
       </div>
       <div class="reveal" style="background:var(--tint);border-radius:10px;padding:30px;text-align:center;">
         <div class="mont" style="font-weight:600;font-size:1.9rem;color:var(--plum);">175k+</div>
-        <div style="margin-top:8px;font-size:.9rem;">CHF/год — руководитель бухгалтерии (chef comptable)</div>
+        <div style="margin-top:8px;font-size:.9rem;">CHF/год — руководитель бухгалтерии</div>
       </div>
       <div class="reveal" style="background:var(--tint);border-radius:10px;padding:30px;text-align:center;">
         <div class="mont" style="font-weight:600;font-size:1.9rem;color:var(--plum);">210–430k</div>
-        <div style="margin-top:8px;font-size:.9rem;">CHF/год — команда бухгалтерии 2–4 человека</div>
+        <div style="margin-top:8px;font-size:.9rem;">CHF/год — собственная команда из 2–4 человек</div>
       </div>
     </div>
 
     <div class="reveal" style="text-align:center;max-width:620px;margin:0 auto 38px;">
-      <h3 class="mont" style="font-size:1.4rem;">Три уровня сотрудничества</h3>
-      <p style="font-size:.92rem;margin-top:6px;">Ориентиры годовой стоимости. Точная цена — от числа проводок, сотрудников и валют; это рамка для разговора, не прайс-лист.</p>
+      <h3 class="mont" style="font-size:1.4rem;">Прозрачные пакеты под размер вашей компании</h3>
+      <p style="font-size:.95rem;margin-top:6px;">Выберите уровень — и платите за результат, а не за штат.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch;">
-      <!-- tier 1 -->
       <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:36px 30px;display:flex;flex-direction:column;box-shadow:0 22px 48px -34px rgba(80,18,58,.3);">
         <span class="eyebrow">Real-Time Books</span>
         <p style="font-size:.86rem;margin-top:8px;color:var(--muted);">Средняя компания · 10–49 сотрудников</p>
-        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:var(--plum);">18–30k</span><span style="font-size:.85rem;color:var(--muted);"> CHF / год</span></div>
+        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:var(--plum);">от 18k</span><span style="font-size:.85rem;color:var(--muted);"> CHF / год</span></div>
         <ul style="list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;gap:10px;font-size:.92rem;color:var(--ink);">
-          <li>· Реалтайм-учёт, НДС, кредиторы/дебиторы</li>
-          <li>· Защищённый портал Figemax</li>
+          <li>· Учёт в реальном времени, НДС, дебиторы/кредиторы</li>
+          <li>· Личный кабинет Figemax</li>
           <li>· Регулярная отчётность</li>
         </ul>
-        <p style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);">≈ <b class="text-plum">70%</b> экономии против одного штатного бухгалтера</p>
+        <p style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);">До <b class="text-plum">70%</b> дешевле одного штатного бухгалтера</p>
       </div>
-      <!-- tier 2 выделенный -->
       <div class="reveal" style="background:var(--plum);color:#fff;border-radius:10px;padding:38px 30px;display:flex;flex-direction:column;position:relative;box-shadow:0 34px 70px -30px rgba(80,18,58,.6);">
-        <span style="position:absolute;top:20px;right:20px;font-family:'Montserrat';font-weight:600;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.16);border-radius:3px;padding:5px 10px;">Популярный</span>
+        <span style="position:absolute;top:20px;right:20px;font-family:'Montserrat';font-weight:600;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.16);border-radius:3px;padding:5px 10px;">Выбор большинства</span>
         <span class="eyebrow" style="color:#e7a9cf;">Finance Partner</span>
         <p style="font-size:.86rem;margin-top:8px;color:rgba(255,255,255,.75);">Компания · 50–249 сотрудников</p>
-        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:#fff;">36–60k</span><span style="font-size:.85rem;color:rgba(255,255,255,.7);"> CHF / год</span></div>
+        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:#fff;">от 36k</span><span style="font-size:.85rem;color:rgba(255,255,255,.7);"> CHF / год</span></div>
         <ul style="list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;gap:10px;font-size:.92rem;color:rgba(255,255,255,.94);">
           <li>· Всё из Real-Time Books</li>
           <li>· Ежемесячная управленческая отчётность</li>
           <li>· Мультивалюта EUR/CHF</li>
-          <li>· Квартальные разборы с аналитикой</li>
+          <li>· Квартальные разборы с финдиректором</li>
         </ul>
-        <p style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);font-size:.86rem;color:rgba(255,255,255,.8);">≈ <b style="color:#fff;">70–80%</b> экономии против команды из 2 человек</p>
+        <p style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);font-size:.86rem;color:rgba(255,255,255,.8);">До <b style="color:#fff;">80%</b> дешевле собственной команды</p>
       </div>
-      <!-- tier 3 -->
       <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:36px 30px;display:flex;flex-direction:column;box-shadow:0 22px 48px -34px rgba(80,18,58,.3);">
         <span class="eyebrow">Virtual CFO</span>
         <p style="font-size:.86rem;margin-top:8px;color:var(--muted);">Крупная компания / группа · 250+</p>
-        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:var(--plum);">60–120k</span><span style="font-size:.85rem;color:var(--muted);"> CHF / год</span></div>
+        <div style="margin:20px 0;"><span class="mont" style="font-weight:600;font-size:1.85rem;color:var(--plum);">от 60k</span><span style="font-size:.85rem;color:var(--muted);"> CHF / год</span></div>
         <ul style="list-style:none;padding:0;margin:0;flex:1;display:flex;flex-direction:column;gap:10px;font-size:.92rem;color:var(--ink);">
           <li>· Всё из Finance Partner</li>
           <li>· Консолидация и бюджетирование</li>
           <li>· Роль внешнего финдиректора</li>
           <li>· Налоговое планирование</li>
         </ul>
-        <p style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);">≈ <b class="text-plum">70–80%</b> экономии против штата + CFO</p>
+        <p style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);">Дешевле штата с финансовым директором</p>
       </div>
     </div>
+    <p class="reveal" style="text-align:center;font-size:.9rem;color:var(--muted);margin-top:28px;">Точную стоимость рассчитаем бесплатно по объёму вашей компании — <a href="#contact" class="link-u">запросите предложение</a>.</p>
   </div>
 </section>
 
-<!-- ===== КАК ЭТО РАБОТАЕТ ===== -->
+<!-- ===== БЛОК-АКЦЕНТ (затемнённое бордовое фото) ===== -->
+<section style="position:relative;padding:110px 0;overflow:hidden;">
+  <img src="assets/img/band-bg.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(50,12,38,.92),rgba(67,15,48,.78));"></div>
+  <div class="wrap reveal" style="position:relative;text-align:center;max-width:760px;">
+    <h2 style="color:#fff;font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:18px;">Сосредоточьтесь на своём деле.<br>Финансы — на нас.</h2>
+    <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:600px;margin:0 auto 30px;">Реальное время, контроль на каждый рапп и роль внешнего финансового директора — от фидуциара, которому доверяют врачи и компании Романдии.</p>
+    <a href="#contact" class="btn btn-light">Запросить предложение</a>
+  </div>
+</section>
+
+<!-- ===== КАК МЫ РАБОТАЕМ ===== -->
 <section id="process" style="padding:84px 0 90px;background:var(--tint);">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 56px;">
-      <p class="eyebrow" style="margin-bottom:14px;">Как это работает</p>
+      <p class="eyebrow" style="margin-bottom:14px;">Как мы работаем</p>
       <h2 class="h-sec">Три шага — и вы видите бизнес в реальном времени</h2>
       <div class="uline" style="margin:18px auto 0;"></div>
     </div>
@@ -282,28 +290,48 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
       <div class="reveal" style="text-align:center;">
         <div class="mont" style="width:56px;height:56px;border-radius:50%;background:var(--plum);color:#fff;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;">1</div>
         <h3 class="mont" style="font-size:1.2rem;margin-bottom:12px;">Вы передаёте документы</h3>
-        <p style="font-size:.95rem;">E-mail, фото, PDF-выписки или загрузка через защищённый портал Figemax. Без внедрения софта и переобучения вашей команды.</p>
+        <p style="font-size:.95rem;">E-mail, фото, PDF-выписки или загрузка через личный кабинет. Без внедрения софта и переобучения вашей команды.</p>
       </div>
       <div class="reveal" style="text-align:center;">
         <div class="mont" style="width:56px;height:56px;border-radius:50%;background:var(--plum);color:#fff;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;">2</div>
-        <h3 class="mont" style="font-size:1.2rem;margin-bottom:12px;">Figemax ведёт учёт в реальном времени</h3>
-        <p style="font-size:.95rem;">Проводки, сверка с источником, НДС, зарплата — с контрольными точками качества. Данные размещены в Швейцарии.</p>
+        <h3 class="mont" style="font-size:1.2rem;margin-bottom:12px;">Мы ведём учёт в реальном времени</h3>
+        <p style="font-size:.95rem;">Проводки, сверка с источником, НДС, зарплата — с контролем качества на каждом шаге. Данные размещены в Швейцарии.</p>
       </div>
       <div class="reveal" style="text-align:center;">
         <div class="mont" style="width:56px;height:56px;border-radius:50%;background:var(--plum);color:#fff;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;">3</div>
         <h3 class="mont" style="font-size:1.2rem;margin-bottom:12px;">Вы видите картину каждый день</h3>
-        <p style="font-size:.95rem;">Баланс, P&amp;L, статус НДС, по филиалам и центрам — в реальном времени, плюс отчётность и разборы уровня финдиректора.</p>
+        <p style="font-size:.95rem;">Баланс, прибыль, НДС, разрезы по филиалам — в реальном времени, плюс отчётность и разборы уровня финдиректора.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== ОТЗЫВЫ (плам-баннер) ===== -->
-<section id="confiance" class="band angle-tb" style="padding:118px 0;margin:-2px 0;">
+<!-- ===== КОМАНДА ===== -->
+<section id="equipe" style="padding:84px 0 90px;background:#fff;">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
+      <p class="eyebrow" style="margin-bottom:14px;">Наша команда</p>
+      <h2 class="h-sec">Люди, которые ведут ваши финансы</h2>
+      <div class="uline" style="margin:18px auto 0;"></div>
+      <p class="lead" style="margin-top:18px;">Молодая динамичная команда с регулярно обновляемой квалификацией — рядом с клиентом, в прямом диалоге.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;">
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/maxime.jpg" alt="Maxime Bugnon"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Maxime Bugnon</h3><p style="font-size:.84rem;color:var(--muted);">CEO · финансы и учёт (Brevet fédéral)</p></div>
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/sebastien.jpg" alt="Sébastien Bugnon"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Sébastien Bugnon</h3><p style="font-size:.84rem;color:var(--muted);">Учёт, налоги, закрытия мед-практик</p></div>
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/katia.jpg" alt="Katia Castella"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Katia Castella</h3><p style="font-size:.84rem;color:var(--muted);">Экономика предприятия, HES-SO</p></div>
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/valerie.jpg" alt="Valérie Nowacki"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Valérie Nowacki</h3><p style="font-size:.84rem;color:var(--muted);">Закрытия и поддержка ревизии</p></div>
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/myriam.jpg" alt="Myriam Cecchetto"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Myriam Cecchetto</h3><p style="font-size:.84rem;color:var(--muted);">Закрытия и поддержка ревизии</p></div>
+      <div class="member reveal" style="text-align:center;"><img src="assets/img/team/sacha.jpg" alt="Sacha Gendre"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Sacha Gendre</h3><p style="font-size:.84rem;color:var(--muted);">Экономика предприятия, HES-SO</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОТЗЫВЫ (плам) ===== -->
+<section id="confiance" class="band" style="padding:96px 0;">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
       <p style="font-family:'Montserrat';letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.72rem;color:#e7a9cf;margin-bottom:14px;">Témoignages</p>
-      <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);">Фидуциар «à taille humaine»</h2>
+      <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);">Нам доверяют клиенты Романдии</h2>
       <div style="width:62px;height:3px;background:#e7a9cf;border-radius:2px;margin:18px auto 0;"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;">
@@ -328,9 +356,9 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;">
     <div class="reveal">
       <p class="eyebrow" style="margin-bottom:14px;">Связаться</p>
-      <h2 class="h-sec" style="margin-bottom:18px;">Начните с пилота на 90 дней</h2>
+      <h2 class="h-sec" style="margin-bottom:18px;">Попробуйте на своих данных — пилот 90 дней</h2>
       <div class="uline" style="margin-bottom:24px;"></div>
-      <p class="lead" style="max-width:440px;margin-bottom:30px;">Выберите одно-два направления. Мы ведём учёт в реальном времени, вы проверяете каждую цифру. Решение о продолжении — после того, как вы увидели качество на своих данных.</p>
+      <p class="lead" style="max-width:440px;margin-bottom:30px;">Выберите одно-два направления. Мы ведём учёт в реальном времени, вы проверяете каждую цифру и сами решаете продолжать — увидев качество на своих данных.</p>
       <div style="display:flex;flex-direction:column;gap:20px;font-size:.95rem;">
         <div>
           <div class="mont" style="font-weight:600;color:var(--plum);margin-bottom:5px;">FIGEMAX SA</div>
@@ -363,40 +391,44 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
   </div>
 </section>
 
-<!-- ===== FOOTER плам ===== -->
-<footer>
-  <div style="background:var(--plum-d);color:#fff;padding:64px 0 56px;text-align:center;">
-    <div class="wrap">
-      <img src="assets/img/logo-figemax.png" alt="Figemax SA" style="height:34px;width:auto;margin:0 auto 26px;filter:brightness(0) invert(1);">
-      <p style="color:rgba(255,255,255,.85);">Ch. du Clos 21 · 1584 Villars-le-Grand &nbsp;|&nbsp; Grand'Rue 8 · 2108 Couvet</p>
-      <p style="color:#fff;font-weight:600;margin:8px 0 4px;">+41 26 535 82 36 · +41 79 291 54 59 · info@figemax.ch</p>
-      <p style="color:rgba(255,255,255,.7);font-size:.9rem;margin-top:18px;font-weight:600;">Ou sur rendez-vous :</p>
-      <p style="color:rgba(255,255,255,.8);font-size:.92rem;">Rue de la Gruyères 28 · 1630 Bulle &nbsp;|&nbsp; Quai Robert-Comtesse 3 · 2000 Neuchâtel &nbsp;|&nbsp; Rue de la Rauracie 14 · 2340 Le Noirmont</p>
+<!-- ===== FOOTER (серый, как у них) ===== -->
+<footer style="background:var(--charcoal);color:rgba(255,255,255,.72);padding:60px 0 26px;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);">
+      <div>
+        <a href="#top" aria-label="Наверх"><img src="assets/img/logo-figemax.png" alt="Figemax SA" style="height:32px;width:auto;margin-bottom:18px;filter:brightness(0) invert(1);"></a>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.6);max-width:280px;">Une fiduciaire à taille humaine. Бухгалтерия и финансовая функция в реальном времени для компаний Романдии.</p>
+      </div>
+      <div style="font-size:.9rem;">
+        <h4 style="color:#fff;font-size:.95rem;margin-bottom:14px;">Контакты</h4>
+        <p style="margin-bottom:6px;">Ch. du Clos 21 · 1584 Villars-le-Grand</p>
+        <p style="margin-bottom:6px;">Grand'Rue 8 · 2108 Couvet</p>
+        <p style="color:rgba(255,255,255,.6);">+41 26 535 82 36 · info@figemax.ch</p>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-size:.95rem;margin-bottom:14px;">Технология реального времени</h4>
+        <a href="https://arvut.ch" target="_blank" rel="noopener" class="mont" style="color:var(--green);font-weight:800;font-size:1.7rem;letter-spacing:.01em;display:inline-block;line-height:1;">Arvut</a>
+        <p style="font-size:.86rem;color:rgba(255,255,255,.6);margin-top:8px;">Автоматизация и платформа учёта. Данные размещены в Швейцарии.</p>
+      </div>
     </div>
-  </div>
-  <!-- угольная полоса: партнёры + Arvut + legal -->
-  <div style="background:var(--charcoal);color:rgba(255,255,255,.75);padding:48px 0 24px;">
-    <div class="wrap">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);">
-        <img src="assets/img/logo-fmh.png" alt="FMH Services" style="height:42px;width:auto;opacity:.95;">
-        <img src="assets/img/logo-winbiz.png" alt="WinBIZ" style="height:32px;width:auto;opacity:.95;">
-        <img src="assets/img/logo-swiss21.png" alt="Swiss21" style="height:64px;width:auto;opacity:.95;">
-      </div>
-      <p style="text-align:center;max-width:620px;margin:26px auto 0;font-size:.86rem;color:rgba(255,255,255,.6);">Figemax SA est une entreprise de conseil indépendante sur le plan juridique et économique, recommandée par la société coopérative FMH Services.</p>
-      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:rgba(255,255,255,.5);">
-        <p>Automatisation &amp; plateforme temps réel — <a href="https://arvut.ch" target="_blank" rel="noopener" style="color:rgba(255,255,255,.8);font-weight:600;">Arvut</a></p>
-        <p>© 2026 Figemax SA — démo</p>
-      </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;padding:36px 0 30px;border-bottom:1px solid rgba(255,255,255,.1);">
+      <img src="assets/img/logo-fmh.png" alt="FMH Services" style="height:40px;width:auto;opacity:.95;">
+      <img src="assets/img/logo-winbiz.png" alt="WinBIZ" style="height:30px;width:auto;opacity:.95;">
+      <img src="assets/img/logo-swiss21.png" alt="Swiss21" style="height:60px;width:auto;opacity:.95;">
+    </div>
+    <p style="text-align:center;max-width:620px;margin:24px auto 0;font-size:.85rem;color:rgba(255,255,255,.55);">Figemax SA est une entreprise de conseil indépendante sur le plan juridique et économique, recommandée par la société coopérative FMH Services.</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:rgba(255,255,255,.45);">
+      <p>Технология реального времени — <a href="https://arvut.ch" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Arvut</a></p>
+      <p>© 2026 Figemax SA — демо-страница</p>
     </div>
   </div>
 </footer>
 
-<style>
-@media(max-width:860px){.hide-mob{display:none!important;}}
-</style>
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// клик по логотипу — всегда наверх
+document.querySelectorAll('a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});}));
 </script>
 </body>
 </html>
