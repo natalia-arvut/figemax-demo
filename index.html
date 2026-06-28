@@ -50,8 +50,12 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 .reveal.in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto;}.reveal{opacity:1;transform:none;}}
 .wrap{max-width:1180px;margin:0 auto;padding-left:22px;padding-right:22px;}
-.member img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block;filter:saturate(1.02);}
+.member img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top center;border-radius:10px;display:block;filter:saturate(1.02);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.angtop{position:absolute;left:0;top:0;width:100%;height:56px;transform:translateY(-55px);line-height:0;z-index:3;pointer-events:none;}
+.angtop svg{width:100%;height:100%;display:block;}
 @media(max-width:860px){.hide-mob{display:none!important;}}
+@media(max-width:640px){.team-grid{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head>
 <body>
@@ -73,21 +77,21 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 
 <!-- ===== HERO (карточка справа, ноутбук+медицина слева) ===== -->
 <section style="position:relative;min-height:100svh;display:flex;align-items:center;padding-top:70px;overflow:hidden;">
-  <img src="assets/img/hero-laptop.jpg" alt="Финансовый дашборд на ноутбуке в медицинском кабинете" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 55%;">
+  <img src="assets/img/hero-office.jpg" alt="Финансовый дашборд Figemax на экране в кабинете" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:32% 50%;">
   <div class="wrap" style="position:relative;width:100%;display:flex;justify-content:flex-end;">
-    <div class="reveal in" style="background:#fff;border-radius:8px;max-width:540px;width:100%;padding:44px 42px;box-shadow:0 40px 90px -36px rgba(60,12,44,.6);margin:40px 0;">
-      <p class="eyebrow" style="margin-bottom:16px;">Бухгалтерия и финансы в реальном времени</p>
-      <h1 class="os" style="font-weight:700;color:var(--plum);font-size:clamp(1.8rem,3.7vw,2.5rem);line-height:1.15;margin-bottom:18px;">
+    <div class="reveal in" style="background:#fff;border-radius:8px;max-width:620px;width:100%;padding:36px 40px;box-shadow:0 40px 90px -36px rgba(60,12,44,.6);margin:24px 0;">
+      <p class="eyebrow" style="margin-bottom:14px;">Бухгалтерия и финансы в реальном времени</p>
+      <h1 class="os" style="font-weight:700;color:var(--plum);font-size:clamp(1.55rem,2.9vw,2.05rem);line-height:1.18;margin-bottom:16px;">
         Финансы вашей компании —<br>каждый день перед глазами
       </h1>
-      <p class="lead" style="margin-bottom:28px;">
-        Figemax берёт на себя бухгалтерию и финансовую функцию. Вы видите актуальную картину бизнеса каждый день, принимаете решения на свежих цифрах — и платите меньше, чем за собственный отдел.
+      <p class="lead" style="margin-bottom:24px;">
+        Figemax берёт на себя бухгалтерию и финансовую функцию. Вы видите актуальную картину бизнеса каждый день и платите меньше, чем за собственный отдел.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:14px;">
         <a href="#contact" class="btn">Запросить предложение</a>
         <a href="#economie" class="btn btn-out-plum">Узнать стоимость</a>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:28px;color:var(--muted);font-size:.8rem;">
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:20px;color:var(--muted);font-size:.8rem;">
         <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>Данные в Швейцарии</span>
         <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>FMH Services</span>
         <span style="display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--plum);"></span>Vaud · Neuchâtel</span>
@@ -101,11 +105,11 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:700px;margin:0 auto 50px;">
       <p class="eyebrow" style="margin-bottom:14px;">Знакомая ситуация?</p>
-      <h2 class="h-sec">Вы узнаёте о результатах с опозданием —<br>а бухгалтерия дорожает</h2>
+      <h2 class="h-sec">Вы узнаёте о результатах поздно —<br>а бухгалтерия дорожает</h2>
       <div class="uline" style="margin:18px auto 0;"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;">
-      <div class="reveal" style="background:#fff;border-radius:10px;padding:38px 34px;box-shadow:0 26px 55px -30px rgba(80,18,58,.22);">
+      <div class="reveal" style="background:var(--tint);border:1px solid var(--line);border-radius:10px;padding:38px 34px;box-shadow:0 20px 45px -32px rgba(80,18,58,.18);">
         <h3 class="mont" style="font-size:1.25rem;margin-bottom:20px;">Сегодня</h3>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
           <li style="display:flex;gap:12px;"><span style="color:var(--muted);font-weight:700;">—</span>Отчёты раз в квартал; решения — почти вслепую</li>
@@ -171,7 +175,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== МЕДИЦИНА (плам, прямые края) ===== -->
-<section id="medecins" class="band" style="padding:96px 0;">
+<section id="medecins" class="band" style="padding:96px 0;position:relative;"><div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="0,0 0,100 100,100" fill="#551440"/></svg></div>
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center;">
     <div class="reveal">
       <div style="width:60px;height:60px;color:#fff;margin-bottom:22px;">
@@ -198,7 +202,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== СТОИМОСТЬ ===== -->
-<section id="economie" style="padding:84px 0 90px;background:#fff;">
+<section id="economie" style="padding:84px 0 90px;background:#fff;position:relative;"><div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="100,0 0,100 100,100" fill="#ffffff"/></svg></div>
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:700px;margin:0 auto 30px;">
       <p class="eyebrow" style="margin-bottom:14px;">Стоимость</p>
@@ -268,9 +272,10 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== БЛОК-АКЦЕНТ (затемнённое бордовое фото) ===== -->
-<section style="position:relative;padding:110px 0;overflow:hidden;">
+<section style="position:relative;padding:110px 0;">
+  <div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="0,0 0,100 100,100" fill="#430f30"/></svg></div>
   <img src="assets/img/band-bg.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(50,12,38,.92),rgba(67,15,48,.78));"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(50,12,38,.72),rgba(67,15,48,.48));"></div>
   <div class="wrap reveal" style="position:relative;text-align:center;max-width:760px;">
     <h2 style="color:#fff;font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:18px;">Сосредоточьтесь на своём деле.<br>Финансы — на нас.</h2>
     <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:600px;margin:0 auto 30px;">Реальное время, контроль на каждый рапп и роль внешнего финансового директора — от фидуциара, которому доверяют врачи и компании Романдии.</p>
@@ -279,7 +284,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== КАК МЫ РАБОТАЕМ ===== -->
-<section id="process" style="padding:84px 0 90px;background:var(--tint);">
+<section id="process" style="padding:84px 0 90px;background:var(--tint);position:relative;"><div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="100,0 0,100 100,100" fill="#f8f4f7"/></svg></div>
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 56px;">
       <p class="eyebrow" style="margin-bottom:14px;">Как мы работаем</p>
@@ -315,7 +320,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
       <div class="uline" style="margin:18px auto 0;"></div>
       <p class="lead" style="margin-top:18px;">Молодая динамичная команда с регулярно обновляемой квалификацией — рядом с клиентом, в прямом диалоге.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px;">
+    <div class="team-grid">
       <div class="member reveal" style="text-align:center;"><img src="assets/img/team/maxime.jpg" alt="Maxime Bugnon"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Maxime Bugnon</h3><p style="font-size:.84rem;color:var(--muted);">CEO · финансы и учёт (Brevet fédéral)</p></div>
       <div class="member reveal" style="text-align:center;"><img src="assets/img/team/sebastien.jpg" alt="Sébastien Bugnon"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Sébastien Bugnon</h3><p style="font-size:.84rem;color:var(--muted);">Учёт, налоги, закрытия мед-практик</p></div>
       <div class="member reveal" style="text-align:center;"><img src="assets/img/team/katia.jpg" alt="Katia Castella"><h3 class="mont" style="font-size:1.05rem;margin:16px 0 4px;">Katia Castella</h3><p style="font-size:.84rem;color:var(--muted);">Экономика предприятия, HES-SO</p></div>
@@ -327,7 +332,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== ОТЗЫВЫ (плам) ===== -->
-<section id="confiance" class="band" style="padding:96px 0;">
+<section id="confiance" class="band" style="padding:96px 0;position:relative;"><div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="0,0 0,100 100,100" fill="#551440"/></svg></div>
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px;">
       <p style="font-family:'Montserrat';letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.72rem;color:#e7a9cf;margin-bottom:14px;">Témoignages</p>
@@ -352,7 +357,7 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== КОНТАКТ ===== -->
-<section id="contact" style="padding:84px 0 90px;background:#fff;">
+<section id="contact" style="padding:84px 0 90px;background:#fff;position:relative;"><div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="100,0 0,100 100,100" fill="#ffffff"/></svg></div>
   <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;">
     <div class="reveal">
       <p class="eyebrow" style="margin-bottom:14px;">Связаться</p>
@@ -392,7 +397,8 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
 </section>
 
 <!-- ===== FOOTER (серый, как у них) ===== -->
-<footer style="background:var(--charcoal);color:rgba(255,255,255,.72);padding:60px 0 26px;">
+<footer style="background:var(--charcoal);color:rgba(255,255,255,.72);padding:60px 0 26px;position:relative;">
+  <div class="angtop"><svg preserveAspectRatio="none" viewBox="0 0 100 100"><polygon points="0,0 0,100 100,100" fill="#2b2b2b"/></svg></div>
   <div class="wrap">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);">
       <div>
@@ -417,10 +423,6 @@ input:focus,textarea:focus{outline:none;border-color:var(--plum);}
       <img src="assets/img/logo-swiss21.png" alt="Swiss21" style="height:60px;width:auto;opacity:.95;">
     </div>
     <p style="text-align:center;max-width:620px;margin:24px auto 0;font-size:.85rem;color:rgba(255,255,255,.55);">Figemax SA est une entreprise de conseil indépendante sur le plan juridique et économique, recommandée par la société coopérative FMH Services.</p>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;color:rgba(255,255,255,.45);">
-      <p>Технология реального времени — <a href="https://arvut.ch" target="_blank" rel="noopener" style="color:var(--green);font-weight:700;">Arvut</a></p>
-      <p>© 2026 Figemax SA — демо-страница</p>
-    </div>
   </div>
 </footer>
 
